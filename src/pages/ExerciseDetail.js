@@ -37,14 +37,18 @@ const ExerciseDetail = () => {
     fetchExercisesData();
   }, [id]);
 
-  if (!exerciseDetail) return <div>No Data</div>;
+  if (!exerciseDetail) return React.createElement(
+    'div',
+    null,
+    'No Data'
+  );
 
-  return (
-    <Box sx={{ mt: { lg: '96px', xs: '60px' } }}>
-      <Detail exerciseDetail={exerciseDetail} />
-      <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
-      <SimilarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentExercises} />
-    </Box>
+  return React.createElement(
+    Box,
+    { sx: { mt: { lg: '96px', xs: '60px' } } },
+    React.createElement(Detail, { exerciseDetail: exerciseDetail }),
+    React.createElement(ExerciseVideos, { exerciseVideos: exerciseVideos, name: exerciseDetail.name }),
+    React.createElement(SimilarExercises, { targetMuscleExercises: targetMuscleExercises, equipmentExercises: equipmentExercises })
   );
 };
 

@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import ExerciseDetail from './pages/ExerciseDetail';
 import BmiCalculator from './pages/BmiCalculator';
 
+
 const App = () => {
   return (
     <Box width="400px" sx={ {width: { xl: '1488px'} } } m="auto">

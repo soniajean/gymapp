@@ -31,6 +31,7 @@ const Navbar = () => React.createElement(
       { href: '#exercises', style: { textDecoration: 'none', color: '#b2becd' } },
       'Exercises'
     ),
+  
     React.createElement(
       Link,
       { to: '/BmiCalculator', style: { textDecoration: 'none', color: '#b2becd' } },
